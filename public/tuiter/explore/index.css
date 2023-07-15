@@ -1,0 +1,22 @@
+.rounded-corners-all-around {
+    background: lightgrey;
+    border-radius: 50px;
+    border-color: lightgrey;
+    border-style: solid;
+    height: 30px;
+    width:90%;
+    padding-left: 10px;
+}
+
+.border-light-grey {
+    border-color: lightgrey;
+}
+.bg-color-light-grey {
+    background-color: lightgray;
+}
+.fg-color-dark-grey {
+    color: darkgrey;
+}
+
+
+ 
