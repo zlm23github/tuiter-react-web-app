@@ -1,0 +1,186 @@
+.wd-title {
+    width: 100%;
+    height: 80px;
+    padding-left: 30px;
+}
+
+.wd-title p {
+    font-size: 25px;
+}
+
+.wd-title b {
+    position: relative;
+    left: 100px;
+}
+
+.wd-title i.icon{
+    color: grey;
+    position: absolute;
+    left:95%;
+}
+
+.wd-tuit-figure1 {
+    position: absolute;
+    left: -20px;
+}
+
+.wd-tuit-content {
+    position: absolute;
+    left: 70px;
+    top: 90px;
+    width: 100%;
+}
+
+.wd-tuit-content ul {
+    list-style: none;
+}
+
+.wd-tuit-content i.icon1 {
+    color: red;
+}
+
+.wd-tuit-content i.icon2 {
+    color: blue;
+}
+
+.wd-tuit-content ul li{
+    font-size: 15px;
+}
+
+
+.wd-tuit-content ul li span.date {
+    padding-left: 5px;
+    color: grey;
+}
+
+.wd-tuit-content ul li span.more {
+    position: absolute;
+    left: 90%;
+    color: grey;
+    font-size: 20px;
+}
+
+.wd-tuit-content ul li p.first {
+    position: relative;
+    top: -10px;
+}
+
+.wd-tuit-content {
+    width: 100%;
+    padding-top: 10px;
+}
+
+.wd-tuit-content-pic {
+    position: relative;
+    width: 100%;
+    height: 650px;
+}
+
+.wd-tuit-content-pic img{
+    border-radius: 15px 15px 0px 0px;
+    border-style: solid;
+    border-color: lightgrey;
+}
+
+.wd-tuit-content-pic p{
+    position: relative;
+    top: -20px;
+    border-radius: 0px 0px 15px 15px;
+    border-style: solid;
+    border-color: lightblue;
+}
+
+.wd-tuit-content p span.first {
+    position: relative;
+    top: 5px;
+    left: 10px;
+    font-size: 15px;
+    color: grey;
+}
+
+.wd-tuit-content p span.second {
+    position: relative;
+    top: 10px;
+    padding-top: 50px;
+    padding-left: 10px;
+    font-size: 18px;
+}
+
+.wd-tuit-content p span.third {
+    position: relative;
+    top: 15px;
+    padding-left: 10px;
+    color: grey;
+    font-size: 15px;
+}
+
+.wd-tuit-figure2 {
+    position: absolute;
+    left:-20px;
+    top: 850px;
+}
+
+.wd-tuit-content-comment {
+    position: absolute;
+    top: 800px;
+    font-size: 15px;
+    color: grey;
+}
+
+.wd-tuit-content-comment span {
+    padding-left: 10px;
+}
+
+.wd-tuit-content-comment i.space {
+    padding-left: 50px;
+}
+
+.wd-tuit-content ul li.position-adjusted {
+    padding-top: 113px;
+}
+
+.wd-tuit-content a {
+    text-decoration: none;
+}
+
+.wd-tuit-content span.at {
+    padding-left: 5px;
+    color: blue;
+}
+
+.wd-tuit-content-pic2 {
+    position: relative;
+    top: 30px;
+    width: 100%;
+    height: 650px;
+}
+
+.wd-tuit-content-pic2 img {
+    border-radius: 15px 15px 0px 0px;
+    border-style: solid;
+    border-color: lightgrey;
+}
+
+.wd-tuit-content-pic2 p {
+    position: relative;
+    top: -20px;
+    border-radius: 0px 0px 15px 15px;
+    border-style: solid;
+    border-color: lightgrey;
+}
+
+.wd-tuit-content-comment2 {
+    position: absolute;
+    top: 1680px;
+    font-size: 15px;
+    color: grey;
+}
+
+.wd-tuit-content-comment2 span {
+    padding-left: 10px;
+}
+
+.wd-tuit-content-comment2 i.space {
+    padding-left: 50px;
+}
+

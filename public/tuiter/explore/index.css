@@ -1,22 +1,123 @@
-.rounded-corners-all-around {
-    background: lightgrey;
-    border-radius: 50px;
-    border-color: lightgrey;
-    border-style: solid;
-    height: 30px;
-    width:90%;
-    padding-left: 10px;
+
+.col-2 {
+    margin: 10px;
+    padding-top: 10px;
 }
 
-.border-light-grey {
-    border-color: lightgrey;
+.col-6 {
+    margin: 10px;
 }
-.bg-color-light-grey {
-    background-color: lightgray;
+
+.col-6 label.mag {
+    position: relative;
+    top: -50px;
+    left: 20px;
 }
-.fg-color-dark-grey {
-    color: darkgrey;
+
+.col-6 label.gear {
+    position:relative;
+    top:-48px;
+    left: 580px;
+    color: blue;
+    font-size: 25px;
+}
+
+.col-6 input {
+    width: 90%;
+    margin: 10px;
+    padding-left: 35px;
+}
+
+.col-6 ul {
+    width: 100%;
+    position: relative;
+    top: -50px;
+}
+
+.col-6 div.image {
+    position: relative;
+    top: -30px;
+}
+
+.col-6 ul.adjust {
+    border-radius: 0px 0px 5px 5px;
+}
+
+.col-6 p span.first {
+    color: grey;
+}
+
+.col-6 p span.second {
+    font-size: 17px;
+}
+
+.col-6 p i {
+    padding-left: 5px;
 }
 
 
- 
+.col-6 p span.third {
+    font-size: 15px;
+    color: grey;
+}
+
+.col-6 ul img.first {
+    position: relative;
+    top: 30px;
+}
+
+.col-6 ul img.second {
+    position: relative;
+    top: 30px;
+}
+
+.col-6 ul img.third {
+    position: relative;
+    top: 20px;
+}
+
+.col-6 ul img.fourth {
+    position: relative;
+    top: 30px;
+}
+
+#right {
+    margin:10px;
+}
+
+#right li.adjust {
+    height: 65px;
+}
+
+#right img.first {
+    position: relative;
+    top: -10px;
+    left: -15px;
+}
+
+#right div.col-5 {
+    width: 160px;
+}
+
+#right div.col-5 span.first-row {
+    position: relative;
+    left: -20px;
+    font-size: 15px;
+}
+
+#right div.col-5 span.second-row {
+    color: grey;
+    position: relative;
+    left: -20px;
+    font-size: 15px;
+}
+
+#right div.col {
+    position: relative;
+    right: -10px;
+    top: 5px;
+}
+
+#right div.col button.size {
+    font-size: 12px;
+}

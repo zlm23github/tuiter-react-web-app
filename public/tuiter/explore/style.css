@@ -1,0 +1,106 @@
+.wd-search-bar {
+    background: lightgrey;
+    border-radius: 50px;
+    height: 30px;
+    width:90%;
+    padding-left: 10px;
+}
+
+.wd-search-bar input {
+    position: relative;
+    top: 5px;
+    padding-left: 10px;
+    background-color: lightgrey;
+    border-style: solid;
+    border-color: lightgrey;
+    color: darkgrey;
+}
+
+.wd-input-field {
+    position: relative;
+    width: 95%;
+}
+
+.wd-search-bar i {
+    position: relative;
+    top: 6px;
+}
+
+.wd-icon {
+    position: relative;
+    left: 8%;
+}
+
+.wd-tab {
+    width: 100%;
+    height: 60px;
+}
+
+.wd-tab ul {
+    display: flex;
+}
+
+.wd-tab ul li {
+    text-align: center;
+    list-style: none;
+    width: 17%;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.wd-tab ul li a {
+    text-decoration: none;
+    color: darkslategrey;
+}
+
+.wd-tab ul li.active {
+    border-bottom: 3px solid rgb(27, 141, 179);
+}
+
+.wd-pic {
+    width: 100%;
+    height: 500px;
+}
+
+.wd-pic-text {
+    position: absolute;
+    bottom: -60px;
+    left: 16px;
+    font-size: 40px;
+    color: white;
+}
+
+.wd-list {
+    padding-top: 20px;
+    width: 100%;
+
+}
+
+.wd-list ul li {
+    list-style-type: none;
+    font-size: 20px;
+    color:grey;
+}
+
+.wd-list ul li i{
+    position: absolute;
+    left: 95%;
+    color: grey;
+}
+
+.wd-list ul li span {
+    color: darkslategrey;
+}
+
+
+
+
+
+
+
+
+
+
+
+ 
