@@ -1,10 +1,12 @@
+import {Link} from "react-router-dom";
 import Assignment3 from "./a3";
+import Nav from "../nav";
 
 function Labs() {
     return(
        <div>
-          {/* <h1>Assignment 3</h1> */}
-          <Assignment3/>
+         <Nav/>
+         <Assignment3/>
        </div>
     );
  }
