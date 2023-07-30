@@ -7,7 +7,7 @@ import { faFaceSmile } from "@fortawesome/free-regular-svg-icons";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import {createTuit} from "./tuits/reducers/tuits-reducer";
 import {useDispatch} from "react-redux";
-// 1
+
 
 const WhatsHappening = () => {
  let [whatsHappening, setWhatsHappening] = useState('');
