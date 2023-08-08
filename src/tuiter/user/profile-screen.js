@@ -12,7 +12,7 @@ function ProfileScreen() {
  useEffect(() => {
    const loadProfile = async () => {
      const { payload } = await dispatch(profileThunk());
-     console.log(108);
+     //payload undefined
      console.log(payload);
      setProfile(payload);
    };
@@ -21,27 +21,30 @@ function ProfileScreen() {
  return (
     <div>
         <h1>Profile Screen</h1>
-        {profile && (<div>
+        {profile && 
+            (
             <div>
-            <label>First Name</label>
-            <input type="text" value={profile.firstName}
-            onChange={(event) => {
-                const newProfile = {
-                ...profile, firstName: event.target.value,
-                };
-                setProfile(newProfile);
-            }}/>
+                <div>
+                <label>First Name</label>
+                <input type="username" value={profile.firstName}
+                onChange={(event) => {
+                    const newProfile = {
+                    ...profile, firstName: event.target.value,
+                    };
+                    setProfile(newProfile);
+                }}/>
+                </div>
+                <div>
+                <label>Last Name</label>
+                <input type="password" value={profile.lastName}
+                onChange={(event) => {
+                    const newProfile = {
+                    ...profile, lastName: event.target.value,
+                    };
+                    setProfile(newProfile);
+                }}/>
+                </div>
             </div>
-            <div>
-            <label>Last Name</label>
-            <input type="text" value={profile.lastName}
-            onChange={(event) => {
-                const newProfile = {
-                ...profile, lastName: event.target.value,
-                };
-                setProfile(newProfile);
-            }}/>
-            </div></div>
         )}
         <button
             onClick={() => {
