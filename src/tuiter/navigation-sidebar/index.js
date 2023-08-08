@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 const NavigationSidebar = () => {
  const { pathname } = useLocation();
  const [ignore, tuiter, active] = pathname.split("/");
- const links = ["home", "explore", "notifications", "messages", "bookmarks", "lists", "profile",  "more", "login", "register", "profile"];
+ const links = ["home", "explore", "notifications", "messages", "bookmarks", "lists", "profile",  "more"];
  const { currentUser } = useSelector((state) => state.user);
  return (
    <div className="list-group">
@@ -16,9 +16,9 @@ const NavigationSidebar = () => {
          </Link>
          
      )}
-     {!currentUser && <Link className="list-group" to="/tuiter/login">   Login   </Link>}
-     {!currentUser && <Link className="list-group" to="/tuiter/register">Register</Link>}
-     { currentUser && <Link className="list-group" to="/tuiter/profile"> Profile </Link>}
+     {!currentUser && <Link className={`list-group-item text-capitalize ${active === login ? "active" : ""}`} to="/tuiter/login">   Login   </Link>}
+     {!currentUser && <Link className={`list-group-item text-capitalize ${active === register ? "active" : ""}`} to="/tuiter/register">Register</Link>}
+     { currentUser && <Link className={`list-group-item text-capitalize ${active === profile ? "active" : ""}`} to="/tuiter/profile"> Profile </Link>}
    </div>
  );
 };
