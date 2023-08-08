@@ -9,13 +9,13 @@ function ProfileScreen() {
  const dispatch = useDispatch();
  const navigate = useNavigate();
  const save = async () => { await dispatch(updateUserThunk(profile)); };
- useEffect(async() => {
-   const loadProfile =  () => {
-     const { payload } =  dispatch(profileThunk());
+ useEffect(() => {
+   const loadProfile = async () => {
+     const { payload } = await dispatch(profileThunk());
      console.log(payload);
      setProfile(payload);
    };
-   await loadProfile();
+   loadProfile();
  }, []); 
  return (
     <div>
