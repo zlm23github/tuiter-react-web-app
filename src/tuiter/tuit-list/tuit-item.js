@@ -8,7 +8,7 @@ import { faRetweet } from "@fortawesome/free-solid-svg-icons";
 import { faUpload } from "@fortawesome/free-solid-svg-icons";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import {useDispatch} from "react-redux";
-import { deleteTuit } from "../tuits/reducers/tuits-reducer";
+import {deleteTuitThunk} from "../services/tuits-thunks";
 
 
 const TuitItem = (
@@ -30,7 +30,7 @@ const TuitItem = (
  const [likes, setLikes] = useState(tuit.likes + 1);
  const dispatch = useDispatch();
  const deleteTuitHandler = (id) => {
-   dispatch(deleteTuit(id));
+    dispatch(deleteTuitThunk(id));
 }
 
  return(

@@ -5,7 +5,7 @@ import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
 import { faSignal } from "@fortawesome/free-solid-svg-icons";
 import { faFaceSmile } from "@fortawesome/free-regular-svg-icons";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
-import {createTuit} from "./tuits/reducers/tuits-reducer";
+import {createTuitThunk} from "./services/tuits-thunks";
 import {useDispatch} from "react-redux";
 
 
@@ -16,7 +16,7 @@ const WhatsHappening = () => {
     const newTuit = {
         tuit: whatsHappening
       }
-      dispatch(createTuit(newTuit));
+      dispatch(createTuitThunk(newTuit));
       setWhatsHappening("");
  }
  return (
