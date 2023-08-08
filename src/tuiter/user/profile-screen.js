@@ -11,7 +11,9 @@ function ProfileScreen() {
  const save = async () => { await dispatch(updateUserThunk(profile)); };
  useEffect(() => {
    const loadProfile = async () => {
+    console.log(1);
      const { payload } = await dispatch(profileThunk());
+     console.log(2);
      console.log(payload);
      setProfile(payload);
    };
