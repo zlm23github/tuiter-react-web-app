@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 const NavigationSidebar = () => {
  const { pathname } = useLocation();
  const [ignore, tuiter, active] = pathname.split("/");
- const links = ["home", "explore", "notifications", "messages", "bookmarks", "lists", "profile",  "more"];
+ const links = ["home", "explore", "notifications", "messages", "bookmarks", "lists", "profile",  "more", "login", "register", "profile"];
  const { currentUser } = useSelector((state) => state.user);
  return (
    <div className="list-group">
