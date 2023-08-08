@@ -7,6 +7,7 @@ function ProfileScreen() {
  const { currentUser } = useSelector((state) => state.user);
  const [ profile, setProfile ] = useState(currentUser);
  console.log(profile);
+ console.log(1);
  const dispatch = useDispatch();
  const navigate = useNavigate();
  const save = async () => { await dispatch(updateUserThunk(profile)); };
