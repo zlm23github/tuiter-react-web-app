@@ -22,7 +22,9 @@ export const logoutThunk = createAsyncThunk(
 
 export const updateUserThunk = createAsyncThunk(
     "user/updateUser", async (user) => {
+        console.log(1);
         await authService.updateUser(user);
+        console.log(2);
         return user;
 });
 
