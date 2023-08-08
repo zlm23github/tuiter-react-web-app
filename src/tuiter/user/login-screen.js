@@ -21,7 +21,7 @@ function LoginScreen() {
         <h1>Login Screen</h1>
         <div className="mt-2">
             <label>Username</label>
-            <input className="form-control" type="text" value={username}
+            <input className="form-control" type="username" value={username}
             onChange={(event) => setUsername(event.target.value)}/>
         </div>
         <div className="mt-2">
