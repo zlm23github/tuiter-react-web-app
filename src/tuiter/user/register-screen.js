@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { register } from "../services/auth-service";
-// import { registrationThunk } from "../services/auth-thunks"; 
+import { registrationThunk } from "../services/auth-thunks"; 
 
 function RegisterScreen() {
     const [user, setUser] = useState(
@@ -11,7 +10,7 @@ function RegisterScreen() {
     
     const handleRegister = async (e) => {
         try{
-            const newUser = await register(user);
+            const newUser = await registrationThunk(user);
             console.log(newUser); 
             setUser(newUser);
         } catch(e){
