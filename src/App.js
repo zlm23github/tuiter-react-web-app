@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+// import AuthContext from "./users/auth-context";
 import './App.css';
 import Labs from "./labs";
 import HelloWorld from "./labs/a3/hello-world";
@@ -27,6 +28,7 @@ function App() {
   // );
   return (
     <HashRouter>
+      {/* <AuthContext> */}
       <div className='container'>
         <Routes>
           Navigate()
@@ -36,6 +38,7 @@ function App() {
           <Route path="/tuiter/*" element={<Tuiter/>}/>
         </Routes>
       </div>
+      {/* </AuthContext> */}
     </HashRouter>
     
   );
