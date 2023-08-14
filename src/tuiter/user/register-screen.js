@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { register } from "../services/auth-service";
+import { registrationThunk } from "../services/auth-thunks";
 
 function RegisterScreen() {
     const [user, setUser] = useState(
