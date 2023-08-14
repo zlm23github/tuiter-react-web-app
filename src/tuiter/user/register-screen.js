@@ -12,7 +12,7 @@ function RegisterScreen() {
     const handleRegister = async (e) => {
         try{
             const newUser = await register(user);
-            console.log(newUser); 
+            console.log("new"); 
             setUser(newUser);
         } catch(e){
             alert(e)
