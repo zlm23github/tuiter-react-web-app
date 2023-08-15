@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import { useDispatch } from "react-redux";
 import { loginThunk } from "../services/auth-thunks";
+import { login } from "../services/auth-service";
 
 function LoginScreen() {
  const [username, setUsername] = useState("");
@@ -10,8 +11,8 @@ function LoginScreen() {
  const dispatch = useDispatch();
  const handleLogin = async (e) => {
   try {
-    await dispatch(loginThunk({ username, password }));
-    navigate("/profile");
+    await dispatch(login({ username, password }));
+    navigate("tuiter/profile");
   } catch (e) {
     alert(e);
   }
