@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { register } from "../services/auth-service";
 import { useNavigate } from "react-router";
-import { registerThunk } from "../services/auth-thunks";
-
 
 function RegisterScreen() {
     const navigate = useNavigate();
@@ -58,6 +56,22 @@ function RegisterScreen() {
     
 }
 export default RegisterScreen;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // [1:07 PM] Atul Kumar
 
