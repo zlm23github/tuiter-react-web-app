@@ -1,158 +1,158 @@
-// import React, { useState } from "react";
-// import { register } from "../services/auth-service";
-// import { useNavigate } from "react-router";
-// import { registerThunk } from "../services/auth-thunks";
+import React, { useState } from "react";
+import { register } from "../services/auth-service";
+import { useNavigate } from "react-router";
+import { registerThunk } from "../services/auth-thunks";
 
 
-// function RegisterScreen() {
-//     const navigate = useNavigate();
-//     const [user, setUser] = useState(
-//         {
-//             username: "",
-//             password: ""
-//         });
+function RegisterScreen() {
+    const navigate = useNavigate();
+    const [user, setUser] = useState(
+        {
+            username: "",
+            password: ""
+        });
     
-//     const handleRegister = async (e) => {
-//         try{
-//             const newUser = await register(user);
-//             console.log("new"); 
-//             setUser(newUser);
-//             navigate("/tuiter/profile");
-//         } catch(e){
-//             alert(e)
-//         }
+    const handleRegister = async (e) => {
+        try{
+            const newUser = await register(user);
+            console.log("new"); 
+            setUser(newUser);
+            navigate("/tuiter/profile");
+        } catch(e){
+            alert(e)
+        }
         
-//     };
+    };
 
-//     return(
-//         <div>
-//             <h1>Register Screen</h1>
-//             <div className="mt-2">
-//                 <label>Username</label>
-//                 <input 
-//                     className="form-control" 
-//                     type="text" 
-//                     name="username" 
-//                     placeholder="Username" 
-//                     value={user.username}
-//                     onChange={(e) => setUser({...user, username: e.target.value})}
-//                     />
-//             </div>
-//             <div className="mt-2">
-//                 <label>Password</label>
-//                 <input 
-//                     className="form-control" 
-//                     type="text" 
-//                     name="password" 
-//                     placeholder="Password" 
-//                     value={user.password}
-//                     onChange={(e) => setUser({...user, password: e.target.value})}
-//                     />
-//             </div>
+    return(
+        <div>
+            <h1>Register Screen</h1>
+            <div className="mt-2">
+                <label>Username</label>
+                <input 
+                    className="form-control" 
+                    type="text" 
+                    name="username" 
+                    placeholder="Username" 
+                    value={user.username}
+                    onChange={(e) => setUser({...user, username: e.target.value})}
+                    />
+            </div>
+            <div className="mt-2">
+                <label>Password</label>
+                <input 
+                    className="form-control" 
+                    type="text" 
+                    name="password" 
+                    placeholder="Password" 
+                    value={user.password}
+                    onChange={(e) => setUser({...user, password: e.target.value})}
+                    />
+            </div>
             
-//             <input onClick={handleRegister} className="btn btn-primary" value="Register" />
+            <input onClick={handleRegister} className="btn btn-primary" value="Register" />
             
-//         </div>
+        </div>
         
-//     )
+    )
     
-// }
-// export default RegisterScreen;
+}
+export default RegisterScreen;
 
 // [1:07 PM] Atul Kumar
 
-import React, { useState } from "react";
+// import React, { useState } from "react";
 
-import { useNavigate } from "react-router";
+// import { useNavigate } from "react-router";
 
-import { useDispatch } from "react-redux";
+// import { useDispatch } from "react-redux";
 
-import { registerThunk } from "../services/auth-thunks";
+// import { registerThunk } from "../services/auth-thunks";
 
-function RegisterScreen() {
+// function RegisterScreen() {
 
-  const [username, setUsername] = useState("");
+//   const [username, setUsername] = useState("");
 
-  const [password, setPassword] = useState("");
+//   const [password, setPassword] = useState("");
 
-  const navigate = useNavigate();
+//   const navigate = useNavigate();
 
-  const dispatch = useDispatch();
+//   const dispatch = useDispatch();
 
-  const handleRegister = async () => {
+//   const handleRegister = async () => {
 
-    try {
+//     try {
 
-      dispatch(registerThunk({ username, password }))
+//       dispatch(registerThunk({ username, password }))
 
-        .then((resp) => {
+//         .then((resp) => {
 
-          if (resp.payload != null) return navigate("/tuiter/profile");
+//           if (resp.payload != null) return navigate("/tuiter/profile");
 
-        })
+//         })
 
-        .catch(() => console.log("Unable to register"));
+//         .catch(() => console.log("Unable to register"));
 
-    } catch (e) {
+//     } catch (e) {
 
-      alert(e);
+//       alert(e);
 
-    }
+//     }
 
-  };
+//   };
 
-  return (
+//   return (
 
-    <div>
+//     <div>
 
-      <h1>Register Screen</h1>
+//       <h1>Register Screen</h1>
 
-      <div className="mt-2">
+//       <div className="mt-2">
 
-        <label>Username</label>
+//         <label>Username</label>
 
-        <input
+//         <input
 
-          className="form-control"
+//           className="form-control"
 
-          type="text"
+//           type="text"
 
-          value={username}
+//           value={username}
 
-          onChange={(event) => setUsername(event.target.value)}
+//           onChange={(event) => setUsername(event.target.value)}
 
-        />
+//         />
 
-      </div>
+//       </div>
 
-      <div className="mt-2">
+//       <div className="mt-2">
 
-        <label>Password</label>
+//         <label>Password</label>
 
-        <input
+//         <input
 
-          className="form-control"
+//           className="form-control"
 
-          type="password"
+//           type="password"
 
-          value={password}
+//           value={password}
 
-          onChange={(event) => setPassword(event.target.value)}
+//           onChange={(event) => setPassword(event.target.value)}
 
-        />
+//         />
 
-      </div>
+//       </div>
 
-      <button className="btn btn-primary mt-2" onClick={handleRegister}>
+//       <button className="btn btn-primary mt-2" onClick={handleRegister}>
 
-        Register
+//         Register
 
-      </button>
+//       </button>
 
-    </div>
+//     </div>
 
-  );
+//   );
 
-}
+// }
 
-export default RegisterScreen;
+// export default RegisterScreen;
