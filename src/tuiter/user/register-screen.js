@@ -14,6 +14,7 @@ function RegisterScreen() {
             const newUser = await register(user);
             console.log("new"); 
             setUser(newUser);
+            navigate("/tuiter/profile");
         } catch(e){
             alert(e)
         }
