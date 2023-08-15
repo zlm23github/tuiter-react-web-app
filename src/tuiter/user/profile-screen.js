@@ -10,33 +10,33 @@ function ProfileScreen() {
  const navigate = useNavigate();
  
 
- const save = async () => {
+ const save = () => {
     try {
-      await dispatch(updateUserThunk(profile));
+      dispatch(updateUserThunk(profile));
     } catch (error) {
       console.error('Error saving profile:', error);
     }
   };
 
-  useEffect(  () => {
+//   useEffect(  () => {
 
-    dispatch(profileThunk())
+//     dispatch(profileThunk())
 
 
 
-    }, []);
+//     }, []);
 
-//   useEffect(() => {
-//     const loadProfile = async () => {
-//       try {
-//         const { payload } = await dispatch(profileThunk());
-//         setProfile(payload);
-//       } catch (error) {
-//         console.error('Error loading profile:', error);
-//       }
-//     };
-//     loadProfile();
-//   }, [dispatch]);
+  useEffect(() => {
+    const loadProfile = async () => {
+      try {
+        const { payload } = await dispatch(profileThunk());
+        setProfile(payload);
+      } catch (error) {
+        console.error('Error loading profile:', error);
+      }
+    };
+    loadProfile();
+  }, [dispatch]);
 
 
 //   const save =  () => {  dispatch(updateUserThunk(profile)); };
