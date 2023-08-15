@@ -17,11 +17,6 @@ function LoginScreen() {
     alert(e);
   }
 
-  // .then((resp) => {
-  //   if (resp.payload != null) return navigate("/tuiter/profile");
-
-  // }).catch(() => console.log("Unable to login"));
-
 
  };
  return (

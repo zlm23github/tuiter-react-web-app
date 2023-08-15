@@ -18,13 +18,6 @@ function ProfileScreen() {
     }
   };
 
-//   useEffect(  () => {
-
-//     dispatch(profileThunk())
-
-
-
-//     }, []);
 
   useEffect(() => {
     const loadProfile = async () => {
