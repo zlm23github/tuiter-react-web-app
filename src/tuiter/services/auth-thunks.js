@@ -9,16 +9,16 @@ export const loginThunk = createAsyncThunk(
  }
 );
 
-// export const profileThunk = createAsyncThunk(
-//     "auth/profile", async () => {
-//     const response = await authService.profile();
-//     return response.data;
-// });
-
 export const profileThunk = createAsyncThunk(
     "auth/profile", async () => {
-    return await authService.profile();
+    const response = await authService.profile();
+    return response.data;
 });
+
+// export const profileThunk = createAsyncThunk(
+//     "auth/profile", async () => {
+//     return await authService.profile();
+// });
 
 export const logoutThunk = createAsyncThunk(
     "auth/logout", async () => {
@@ -31,18 +31,18 @@ export const updateUserThunk = createAsyncThunk(
         return user;
 });
 
-// export const registerThunk = createAsyncThunk(
-//     "auth/register", async(user) => {
-//         const newUser = await authService.register(user);
-//         return newUser;
-//     }
-// )
-
-
 export const registerThunk = createAsyncThunk(
-    "auth/register", async(credentials) => {
-        const newUser = await authService.register(credentials);
+    "auth/register", async(user) => {
+        const newUser = await authService.register(user);
         return newUser;
     }
 )
+
+
+// export const registerThunk = createAsyncThunk(
+//     "auth/register", async(credentials) => {
+//         const newUser = await authService.register(credentials);
+//         return newUser;
+//     }
+// )
    
