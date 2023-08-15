@@ -14,8 +14,6 @@ function ProfileScreen() {
  useEffect(() => {
     const loadProfile = async () => {
       const { payload } = await dispatch(profileThunk());
-      console.log(payload);
-      console.log("1");
       setProfile(payload);
     };
     loadProfile();
