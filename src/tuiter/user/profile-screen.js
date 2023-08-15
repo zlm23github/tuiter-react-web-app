@@ -8,16 +8,21 @@ function ProfileScreen() {
  const [ profile, setProfile ] = useState(currentUser);
  const dispatch = useDispatch();
  const navigate = useNavigate();
- const save = async () => { await dispatch(updateUserThunk(profile)); };
+ const save =  () => {  dispatch(updateUserThunk(profile)); };
  useEffect(() => {
-   const loadProfile = async () => {
-     const { payload } = await dispatch(profileThunk());
+    async function loadProfile() {
+        const { payload } = await dispatch(profileThunk());
+        console.log(payload);
+        setProfile(payload);
+    }
+//    const loadProfile = async () => {
+//      const { payload } = await dispatch(profileThunk());
      //payload undefined
-     console.log(payload);
-     setProfile(payload);
-   };
+    //  console.log(payload);
+    //  setProfile(payload);
+   
    loadProfile();
- }, []); 
+ }, [dispatch]); 
  return (
     <div>
         <h1>Profile Screen</h1>
