@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { register } from "../services/auth-service";
+import { useNavigate } from "react-router";
 
 
 function RegisterScreen() {
+    const navigate = useNavigate();
     const [user, setUser] = useState(
         {
             username: "",
