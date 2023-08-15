@@ -12,7 +12,7 @@ function RegisterScreen() {
             password: ""
         });
     
-          const handleRegister = async () => {
+    const handleRegister = async () => {
 
     try {
 
